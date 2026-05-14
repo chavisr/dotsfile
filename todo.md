@@ -1,12 +1,7 @@
 # todo
-- nvim lazy load
-- nvim ui
-- nvim vimpack
-- pacman hook
 - cmp over blink
 - find gtk-icons in kde web
 - low battery notify
-- fix ugly power button 
 - kill bluetooth at startup
 - mako or dunst
 - window empty/hidden
@@ -17,7 +12,5 @@
 - waybar polling/interval check
 - fix gtk theme to dark
 - flameshot
-- install arch + encrypt disk
 - nvim 0.12
 - tlp vs autocpu
-- grub remove

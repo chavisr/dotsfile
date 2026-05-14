@@ -124,9 +124,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- lazy package manager
--- require("config.lazy")
-
 -- vim.pack build hook
 -- read https://neovim.io/doc/user/pack/#vim.pack-examples
 -- read https://www.reddit.com/r/neovim/comments/1ssl8qf/extending_vimpack_with_data_build_hooks_and_lazy/

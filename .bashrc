@@ -26,8 +26,6 @@ alias clip="wl-copy"
 alias rand="openssl rand -base64 12"
 alias dots="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias v="nvim"
-alias vi="nvim"
-alias vim="nvim"
 alias i="nsxiv"
 alias f="yazi"
 

@@ -52,8 +52,11 @@ qt6ct
 ripgrep
 rofi
 sof-firmware
+stress
 swaybg
 swaylock
+tlp-dinit
+tlp-rdw
 transmission-qt
 tree
 ttf-jetbrains-mono
