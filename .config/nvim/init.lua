@@ -12,7 +12,7 @@ vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46_cache/"
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.keymap.set("i", "jj", "<Esc>")
-vim.keymap.set("n", "vl", "v$")
+-- vim.keymap.set("n", "vl", "v$")
 vim.keymap.set("n", "vv", "^vg_")
 vim.keymap.set("n", "<leader>e", ":Oil<CR>")
 vim.keymap.set("n", "<leader>w", ":write<CR>")
@@ -146,6 +146,20 @@ vim.api.nvim_create_autocmd("PackChanged", {
   end,
 })
 
+-- vim.pack lazy load
+for _, plug in ipairs(vim.pack.get()) do
+  local spec = plug.spec
+
+  if spec.data and spec.data.event then
+    vim.api.nvim_create_autocmd(spec.data.event, {
+      once = true,
+      callback = function()
+        vim.cmd("packadd " .. spec.name)
+      end,
+    })
+  end
+end
+
 -- vim.pack
 vim.pack.add({
   { src = "https://github.com/stevearc/oil.nvim" },
@@ -158,7 +172,10 @@ vim.pack.add({
   { src = "https://github.com/nvchad/volt" },
   {
     src = "https://github.com/saghen/blink.cmp",
-    version = "v1"
+    version = "v1",
+    data = {
+      event = "InsertEnter"
+    }
   },
   { src = "https://github.com/rafamadriz/friendly-snippets", },
   { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
@@ -168,7 +185,12 @@ vim.pack.add({
   { src = "https://github.com/nvim-telescope/telescope.nvim" },
   { src = "https://github.com/kylechui/nvim-surround" },
   { src = "https://github.com/folke/lazy.nvim" },
-  { src = "https://github.com/windwp/nvim-autopairs" },
+  {
+    src = "https://github.com/windwp/nvim-autopairs",
+    data = {
+      event = "InsertEnter"
+    }
+  },
   {
     src = "https://github.com/iamcco/markdown-preview.nvim",
     data = {
