@@ -1,0 +1,9 @@
+[mgr]
+append_keymap = [
+  # Hopping
+  { on = "<A-k>", run = "arrow prev", desc = "Previous file" },
+  { on = "<A-j>", run = "arrow next", desc = "Next file" },
+  # Navigation
+  { on = "<A-h>", run = "leave", desc = "Back to the parent directory" },
+  { on = "<A-l>", run = "enter", desc = "Enter the child directory" },
+]

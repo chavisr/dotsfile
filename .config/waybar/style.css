@@ -1,0 +1,183 @@
+@define-color black #1e222a;
+@define-color white #abb2bf;
+@define-color red #e06c75;
+@define-color teal #56b6c2;
+@define-color yellow #e5c07b;
+@define-color grey #353b45;
+@define-color green #98c379;
+
+* {
+    font-family: 'JetBrains Mono Nerd Font', 'Noto Sans Thai', 'Noto Sans Mono CJK JP';
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: @black;
+    /* border-bottom: 3px solid rgba(100, 114, 125, 1); */
+    color: @white;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+    /* Avoid rounded borders under each button name */
+    border: none;
+    /* color: @black; */
+    border-radius: 0;
+    padding: 0 14px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+#workspaces button {
+    /* background-color: transparent; */
+    color: @white;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: @white;
+    color: @black;
+    /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+/* #clock, */
+/* #battery, */
+/* #network, */
+/* #pulseaudio, */
+/* #tray { */
+/*     padding: 0 10px; */
+/* } */
+
+/* #window, */
+/* #workspaces { */
+/*     margin: 0 4px; */
+/* } */
+
+/* If workspaces is the leftmost module, omit left margin */
+/* .modules-left>widget:first-child>#workspaces { */
+/*     margin-left: 0; */
+/* } */
+
+/* If workspaces is the rightmost module, omit right margin */
+/* .modules-right>widget:last-child>#workspaces { */
+/*     margin-right: 0; */
+/* } */
+
+#clock {
+    color: @white;
+    padding: 0 10px;
+}
+
+#battery {
+    color: @white;
+    padding: 0 10px;
+}
+
+#network {
+    color: @white;
+    padding: 0 10px;
+    /* background-color: #2980b9; */
+}
+
+#network.disconnected {
+    color: @white;
+    padding: 0 10px;
+    /* background-color: @red; */
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    color: @white;
+}
+
+#pulseaudio.muted {
+    padding: 0 10px;
+    color: @white;
+}
+
+#wireplumber {
+    padding: 0 10px;
+    color: @white;
+}
+
+#wireplumber.muted {
+    padding: 0 10px;
+    color: @red;
+}
+
+#tray {
+    padding: 0 10px;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
+
+#custom-power {
+    color: @white;
+    /* padding: 0 10px; */
+}
+
+#language {
+    color: @white;
+    padding: 0 10px;
+    /* margin: 0 5px; */
+    /* min-width: 16px; */
+}
+
+#keyboard-state {
+    /* color: @white; */
+    /* padding: 0 0px; */
+    /* margin: 0 0px; */
+}
+
+/* #keyboard-state>label { */
+/*     padding: 0 5px; */
+/* } */
+
+#keyboard-state>.locked {
+    padding: 0 2px;
+    background: @red;
+    /* margin: 0 8px; */
+    /* margin: 0 0px; */
+    color: @black;
+}
+
