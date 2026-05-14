@@ -84,6 +84,8 @@ vim.opt.iskeyword:append({ "-" })
 -- vim.opt.iskeyword:append({ "-", "." })
 
 -- autocmds
+vim.api.nvim_create_user_command('PackUpdate', function() vim.pack.update() end, {})
+
 -- highlight yank
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
