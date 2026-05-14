@@ -1,9 +1,7 @@
-auto-cpufreq
 brave-bin
 claude-code
 dashbinsh
 iwmenu-git
-lens-bin
 marp-cli
 paru
 rofi-emoji-git
