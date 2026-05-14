@@ -12,7 +12,6 @@ vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46_cache/"
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.keymap.set("i", "jj", "<Esc>")
--- vim.keymap.set("n", "vl", "v$")
 vim.keymap.set("n", "vv", "^vg_")
 vim.keymap.set("n", "<leader>e", ":Oil<CR>")
 vim.keymap.set("n", "<leader>w", ":write<CR>")

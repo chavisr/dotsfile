@@ -68,6 +68,7 @@ wdisplays
 wiremix
 wireplumber
 wl-clipboard
+xorg-xinput
 xwayland-satellite
 yazi
 yq

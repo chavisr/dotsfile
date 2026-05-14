@@ -10,7 +10,6 @@
 - remove round gtk/qt
 - disable touchpad
 - waybar polling/interval check
-- fix gtk theme to dark
 - flameshot
 - nvim 0.12
 - tlp vs autocpu
